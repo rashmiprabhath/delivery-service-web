@@ -1,0 +1,15 @@
+<div class="row">
+  <div *ngFor='let product of productList' class='column'>
+    <div class="product_container">
+      <div class="card">
+        <img alt="{{product.name}}" src="assets/product_images/{{product.name.toLowerCase()}}.jpg" style="width:100%">
+        <h1>{{product.name | titlecase}}</h1>
+        <p class="price">${{product.price}}</p>
+        <p>{{product.productType.name}}</p>
+        <p>
+          <button>Add to Cart</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
