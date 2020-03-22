@@ -32,8 +32,8 @@ export class ProductsComponent implements OnInit {
 
   addToCart() {
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
+    dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
-    this.dialog.open(ProductDialogComponent, dialogConfig);
+    const dialogRef = this.dialog.open(ProductDialogComponent, dialogConfig);
   }
 }
