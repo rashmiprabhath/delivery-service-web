@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DeliveryBackendService} from '../delivery-backend.service';
 import {Product} from '../models/product';
-import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
-import {ProductDialogComponent} from './product-dialog/product-dialog.component';
 
 @Component({
   selector: 'app-products',
@@ -13,8 +11,7 @@ export class ProductsComponent implements OnInit {
   name: string;
   productList: Product[];
 
-  constructor(private deliveryBackendService: DeliveryBackendService,
-              private dialog: MatDialog ) {
+  constructor(private deliveryBackendService: DeliveryBackendService) {
   }
 
   ngOnInit() {
@@ -28,12 +25,5 @@ export class ProductsComponent implements OnInit {
 
   getAllProducts(): void {
     this.deliveryBackendService.getProducts().subscribe(products => this.productList = products);
-  }
-
-  addToCart() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = false;
-    dialogConfig.autoFocus = true;
-    const dialogRef = this.dialog.open(ProductDialogComponent, dialogConfig);
   }
 }

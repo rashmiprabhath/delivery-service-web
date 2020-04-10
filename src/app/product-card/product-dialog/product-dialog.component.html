@@ -1,0 +1,16 @@
+<h3 mat-dialog-title>{{data.name}}</h3>
+
+<div mat-dialog-content>
+<mat-form-field appearance="fill">
+  <mat-label>Quantity</mat-label>
+  <mat-select (selectionChange) = "onSelector($event)">
+    <mat-option value="{{i}}" *ngFor="let i of quantities">{{i}}</mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+<h4 mat-dialog-content class="dialog-lable">{{'Unit Price: $ '+ data.price}}</h4>
+<h4 mat-dialog-content class="dialog-lable">{{'Sub Total: $ '+ subTotoal}}</h4>
+<div mat-dialog-actions class = button-row>
+  <button mat-raised-button (click) = save()>Save</button>
+  <button mat-raised-button (click) = close()>Cancel</button>
+</div>

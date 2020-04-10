@@ -11,6 +11,10 @@ export class Cart {
 
   deliveryDate: Date;
 
+  constructor() {
+    this.user = new User();
+  }
+
 
   updatePrices() {
     let gross = 0;

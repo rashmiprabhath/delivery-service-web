@@ -1,0 +1,11 @@
+<div class="product_container">
+  <div class="card">
+    <img alt="{{name}}" src="assets/product_images/{{name.toLowerCase()}}.jpg" style="width:100%">
+    <h1>{{name | titlecase}}</h1>
+    <p class="price">${{price}}</p>
+    <p>{{productType.name}}</p>
+    <p>
+      <button (click) = "addToCart()">Add to Cart</button>
+    </p>
+  </div>
+</div>

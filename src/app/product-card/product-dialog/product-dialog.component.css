@@ -1,0 +1,11 @@
+.button-row button,
+.button-row a {
+  margin-right: 8px;
+}
+
+.dialog-lable{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding-top: 10px !important;
+}
+
+
